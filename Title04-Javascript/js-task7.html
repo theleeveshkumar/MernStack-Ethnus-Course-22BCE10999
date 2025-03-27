@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Animation</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f4f4f9; /* Light gray background */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            color: #333; /* Dark gray color */
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .train-container {
+            width: 100%;
+            height: 150px; /* Smaller height */
+            overflow: hidden;
+            position: relative;
+            background-color: #e0f7fa; /* Light blue background for better visibility */
+            border: 2px solid #00796b; /* Teal border */
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+        .train {
+            width: 250px; /* Reduced train size */
+            position: absolute;
+            left: 0;
+            top: 30px; /* Adjusted to fit within the frame */
+        }
+        .controls {
+            margin-top: 20px;
+        }
+        .start-btn, .stop-btn {
+            padding: 12px 25px; /* Increased padding for larger buttons */
+            font-size: 18px; /* Slightly larger font */
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 8px; /* Rounded corners */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+        }
+        .start-btn {
+            background-color: #2e7d32; /* Dark green */
+        }
+        .stop-btn {
+            background-color: #c62828; /* Dark red */
+        }
+        .start-btn:hover {
+            background-color: #388e3c; /* Lighter green on hover */
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+        .stop-btn:hover {
+            background-color: #d32f2f; /* Lighter red on hover */
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Click the following buttons to handle animation</h2>
+
+    <div class="train-container">
+        <img id="train" class="train" src="https://cdn.dribbble.com/userupload/21276309/file/original-b415e6b69bb91ca4897664b3383e4e00.gif" alt="animated train" />
+    </div>
+
+    <div class="controls">
+        <button class="start-btn" onclick="startTrain()">Start</button>
+        <button class="stop-btn" onclick="stopTrain()">Stop</button>
+    </div>
+
+    <script>
+        let train = document.getElementById("train");
+        let position = 0;
+        let trainMoving = null;
+
+        function startTrain() {
+            if (!trainMoving) {
+                trainMoving = setInterval(() => {
+                    position += 5;
+                    train.style.transform = `translateX(${position}px)`;
+                    if (position > window.innerWidth) {
+                        position = -250; // Reset position for smooth looping
+                    }
+                }, 50);
+            }
+        }
+
+        function stopTrain() {
+            clearInterval(trainMoving);
+            trainMoving = null;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form id="userForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <span id="nameError" class="error"></span><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <span id="emailError" class="error"></span><br>
+
+        <label for="website">Website:</label><br>
+        <input type="url" id="website" name="website"><br>
+        <span id="websiteError" class="error"></span><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        <span id="messageError" class="error"></span><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const website = document.getElementById("website").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("websiteError").textContent = "";
+            document.getElementById("messageError").textContent = "";
+
+            if (!name) {
+                document.getElementById("nameError").textContent = "This field is required";
+                isValid = false;
+            }
+            if (!email) {
+                document.getElementById("emailError").textContent = "This field is required";
+                isValid = false;
+            }
+            if (!website) {
+                document.getElementById("websiteError").textContent = "This field is required";
+                isValid = false;
+            }
+            if (!message) {
+                document.getElementById("messageError").textContent = "This field is required";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>

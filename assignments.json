@@ -1,0 +1,118 @@
+[
+    {
+        "title": "HTML Assignment",
+        "links": [
+            {
+                "name": "Task01",
+                "url": "/Title01-HTML/Task01.html"
+            },
+            {
+                "name": "Task02",
+                "url": "/Title01-HTML/Task02.html"
+            },
+            {
+                "name": "Task03",
+                "url": "/Title01-HTML/Task03.html"
+            },
+            {
+                "name": "Task04",
+                "url": "/Title01-HTML/Task04.html"
+            },
+            {
+                "name": "Task05",
+                "url": "/Title01-HTML/Task05.html"
+            }
+        ]
+    },
+    {
+        "title": "CSS Assignment",
+        "links": [
+            {
+                "name": "Task01",
+                "url": "/Title02-CSS/Task01.html"
+            },
+            {
+                "name": "Task02",
+                "url": "/Title02-CSS/Task02.html"
+            },
+            {
+                "name": "Task03",
+                "url": "/Title02-CSS/Task03.html"
+            },
+            {
+                "name": "Task04",
+                "url": "/Title02-CSS/Task04.html"
+            },
+            {
+                "name": "Task05",
+                "url": "/Title02-CSS/Task05.html"
+            }
+        ]
+    },
+    {
+        "title": "Bootstrap Assignment",
+        "links": [
+            {
+                "name": "Task01",
+                "url": "/Title03-Bootstrap/Task01.html"
+            },
+            {
+                "name": "Task02",
+                "url": "/Title03-Bootstrap/Task02.html"
+            },
+            {
+                "name": "Task03",
+                "url": "/Title03-Bootstrap/Task03.html"
+            },
+            {
+                "name": "Task04",
+                "url": "/Title03-Bootstrap/Task04.html"
+            },
+            {
+                "name": "Task05",
+                "url": "/Title03-Bootstrap/Task05.html"
+            }
+        ]
+    },
+    {
+        "title": "JavaScript Assignment",
+        "links": [
+            {
+                "name": "Task01",
+                "url": "/Title04-JavaScript/js-task1.html"
+            },
+            {
+                "name": "Task02",
+                "url": "/Title04-JavaScript/js-task2.html"
+            },
+            {
+                "name": "Task03",
+                "url": "/Title04-JavaScript/js-task3.html"
+            },
+            {
+                "name": "Task04",
+                "url": "/Title04-JavaScript/js-task4.html"
+            },
+            {
+                "name": "Task05",
+                "url": "/Title04-JavaScript/js-task5.html"
+            },
+            {
+                "name": "Task06",
+                "url": "/Title04-JavaScript/js-task6.html"
+            },
+            {
+                "name": "Task07",
+                "url": "/Title04-JavaScript/js-task7.html"
+            },
+            {
+                "name": "Task08",
+                "url": "/Title04-JavaScript/js-task8.html"
+            },
+            {
+                "name": "Task09",
+                "url": "/Title04-JavaScript/js-task9.html"
+            }
+        ]
+    }
+]
